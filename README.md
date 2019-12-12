@@ -28,8 +28,11 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 =======
 # VueHomePage
 利用vue.js框架。模拟b站，爱奇艺等网站的首页效果，仅供学习和参考
->>>>>>> e857b4d2dfd231f1e8a0a447b85d8980f2f8e63c
+
+==========
+#element-ui
+
+
