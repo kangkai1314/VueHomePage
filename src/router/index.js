@@ -17,6 +17,10 @@ export default new Router({
       path: '/aiqiyi',
       name: 'aiqiyi',
       component: () => import('@/views/aiqiyi/index')
+    }, {
+      path: '/lagou',
+      name: 'lagou',
+      component: () => import('@/views/lagou/index')
     }
   ]
 })
