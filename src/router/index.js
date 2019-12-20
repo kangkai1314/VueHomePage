@@ -21,6 +21,13 @@ export default new Router({
       path: '/lagou',
       name: 'lagou',
       component: () => import('@/views/lagou/index')
+    }, {
+      path: '/weibo',
+      name: 'weibo',
+      component: () => import('@/views/weibo/index')
+    }, {
+      path: '/test',
+      component: () => import('@/views/test')
     }
   ]
 })

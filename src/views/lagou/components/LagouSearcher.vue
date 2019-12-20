@@ -37,7 +37,6 @@ export default {
   .input_search{
    padding: 20px 40px;
 
-
   }
   .hot_items{
     display: flex;
@@ -54,6 +53,5 @@ export default {
     text-decoration: none;
     color: #00b38a;
   }
-
 
 </style>
