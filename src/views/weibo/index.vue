@@ -21,6 +21,7 @@
             </el-col>
 
           </el-row>
+        <el-row>
 
         </el-row>
 
@@ -36,9 +37,28 @@ import WeiboRightNav from './components/WeiboRightNav'
 import WeiboInput from './components/WeiboInput'
 import WeiboPerson from './components/WeiboPerson'
 import WeiboContent from './components/weiboContent'
+import {fetchInfo} from '../../api/data'
+
 export default {
   name: 'index',
-  components: {WeiboContent, WeiboPerson, WeiboInput, WeiboRightNav, WeiboNav}
+  components: {WeiboContent, WeiboPerson, WeiboInput, WeiboRightNav, WeiboNav},
+  data () {
+    return {
+      ids: []
+    }
+  },
+  created () {
+    this.fetchIds()
+  },
+  methods: {
+    fetchIds: function () {
+      fetchInfo().then(response => {
+        console.log(response)
+      }).catch(error => {
+        console.log(error)
+      })
+    }
+  }
 }
 </script>
 
