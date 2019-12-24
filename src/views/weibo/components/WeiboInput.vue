@@ -1,7 +1,7 @@
 <template>
     <div class="weibo_send">
-      <el-input type="textarea" style="min-height: 160px"></el-input>
-      <el-button>发送</el-button>
+      <el-input type="textarea" ></el-input>
+      <el-button style="float: right">发送</el-button>
     </div>
 </template>
 
@@ -15,6 +15,9 @@ export default {
   .weibo_send{
     margin: 10px;
     background-color: white;
+  }
+  /deep/ .el-textarea__inner{
+    height: 100px;
   }
 
 </style>

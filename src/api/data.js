@@ -1,8 +1,10 @@
-import request from '@/utils/request'
+import service from '@/utils/request'
 
 export function fetchInfo () {
-  return request({
-    url: '/data',
+  return service({
+    url: '/rating-rule-type/types',
     method: 'get'
   })
 }
+
+

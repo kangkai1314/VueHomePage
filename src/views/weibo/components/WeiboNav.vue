@@ -31,7 +31,6 @@ export default {
 <style scoped>
   .top_menu{
 
-
   }
 
 </style>
