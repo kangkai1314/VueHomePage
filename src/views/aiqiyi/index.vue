@@ -28,7 +28,6 @@ export default {
   }
   .header{
     width: 100%;
-    margin:  0 32px 32px 0;
     background-color: black;
   }
 

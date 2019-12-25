@@ -36,7 +36,6 @@
 
           </div>
 
-
         </div>
       </div>
     </div>
@@ -50,7 +49,7 @@ import WeiboInput from './components/WeiboInput'
 import WeiboPerson from './components/WeiboPerson'
 import WeiboContent from './components/weiboContent'
 import {fetchWeiBoMenus} from '../../api/weibo/menu'
-import WeiboRanks from "./components/weiboRanks";
+import WeiboRanks from './components/weiboRanks'
 
 export default {
   name: 'index',
