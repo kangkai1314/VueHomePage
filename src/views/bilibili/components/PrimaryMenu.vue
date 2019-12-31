@@ -1,29 +1,7 @@
 <template>
-    <el-row class="menus_class">
-      <el-col :span="8" class="menu_item">
-          <a href=""><span>首页</span></a>
-          <a href=""><span>动态</span></a>
-          <a href=""><span>排行榜</span></a>
-      </el-col>
-      <el-col :span="12">
-            <el-menu class="detail_menu">
-              <el-menu-item v-for="menu in menus" :key="menu.id">
-                {{menu.name}}
-              </el-menu-item>
-            </el-menu>
-      </el-col>
-      <el-col :span="4">
-        <ul class="el-row--flex">
-          <el-col :span="1">
-            <li v-for="menu in menus1" :key="menu.id">
-              {{menu.name}}
-            </li>
-          </el-col>
-
-        </ul>
-      </el-col>
-
-    </el-row>
+  <el-menu mode="horizontal">
+    <el-menu-item v-for="menu in menus" :key="menu.id">{{menu.name}}</el-menu-item>
+  </el-menu>
 
 </template>
 
