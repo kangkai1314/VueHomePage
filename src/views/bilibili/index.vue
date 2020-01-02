@@ -3,14 +3,29 @@
       <div class="bilibili_banner">
 
       </div>
-      <div class="bilibili_menus">
-        <div class="test_view">
+      <!--<div class="bilibili_menus">-->
+        <!--<div class="test_view">-->
 
-        </div>
-        <div class="center">
-          <p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>
-          <p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>
-        </div>
+        <!--</div>-->
+        <!--<div class="center">-->
+          <!--<p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>-->
+          <!--<p>这是一个段落。这是一个段落。这是一个段落。这是一个段落。这是一个段落。</p>-->
+        <!--</div>-->
+        <!--<div class="text">-->
+          <!--<div style="display: inline-block;height: 200px;width: 200px"></div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="nav" v-if="show">
+        <el-menu mode="vertical">
+          <el-menu-item v-for="i in 10" :key="i">菜单</el-menu-item>
+        </el-menu>
+      </div>
+      <div class="content">
+       <PrimaryMenu></PrimaryMenu>
+        <top-content></top-content>
+        <tui-guang></tui-guang>
+        <el-image src="https://i0.hdslb.com/bfs/sycp/creative_img/201912/840594a73644df56067b60ba29b28454.jpg"></el-image>
+        <animate-content></animate-content>
       </div>
 
     </div>
@@ -19,9 +34,36 @@
 <script>
 import NavBar from './components/NavBar'
 import PrimaryMenu from './components/PrimaryMenu'
+import TopContent from './components/topContent'
+import TuiGuang from './components/tuiGuang'
+import AnimateContent from './components/animateContent'
 export default {
   name: 'index',
-  components: {PrimaryMenu, NavBar}
+  components: {AnimateContent, TuiGuang, TopContent, PrimaryMenu, NavBar},
+  data () {
+    return {
+      show: false,
+      scroll1: ''
+    }
+  },
+  methods: {
+    scroll: function () {
+      this.scroll1 = document.documentElement.scrollTop
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.scroll)
+  },
+  watch: {
+    scroll1: function (newVal, oldVal) {
+      console.log(newVal)
+      if (newVal > 70) {
+        this.show = true
+      } else {
+        this.show = false
+      }
+    }
+  }
 }
 </script>
 
@@ -116,5 +158,28 @@ export default {
      -moz-column-rule: 4px outset #ff00ff; /* Firefox */
      -webkit-column-rule: 4px outset #ff00ff; /* Safari and Chrome */
    }
+
+  .view{
+    display: inline-block;
+    height: 200px;
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+  .content{
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 1012px;
+    height: 100%;
+  }
+  .nav{
+    position: fixed;
+    width: 100px;
+    height: 100%;
+    background-color: darkgray;
+    right: 1px;
+    top:70px;
+  }
 
 </style>
